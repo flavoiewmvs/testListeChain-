@@ -18,7 +18,8 @@ public class TestListeChaine {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Pile<Double> Mapile = new <Double> Pile();
+//        Pile<Double> Mapile = new <Double> Pile();
+        PileAr<Double> Mapile = new <Double> PileAr();
         Mapile.empiller(new Double(3.12));
         affiche(Mapile, "Apres empiller -3.12 -> ");
         Mapile.empiller(new Double(7.1));
@@ -31,32 +32,18 @@ public class TestListeChaine {
             System.out.println("Attention Pile vide");
         }
         affiche(Mapile, "Apres depiller -> ");
-        System.err.println("Taille :" + Mapile.taille());
+        System.err.println("Taille :" + Mapile.size());
 
-//        test avec linkedlist
-        LinkedList<String> maListe = new LinkedList<String>();
-        maListe.add("Items 1");
-        maListe.add("Items 2");
-        maListe.add("Items 3");
-        maListe.add("Items 4");
-        System.out.println(maListe);
-//        System.out.println(maListe.get(2));
-        maListe.push("Items 999");
-        System.out.println(maListe);
-        try {
-            System.out.println("\n extration du contenu de la liste chaine maListe\n\n");
-            while (maListe.size() > 0) {
-                System.out.println(maListe);
-                System.out.println("-----> "+maListe.pop());
-
-            }
-        } catch (Exception E) {
-            System.out.println("Attention Liste chaine vide vide");
+        ListeDC<Integer> LI = new ListeDC<>();
+        LI.ajouter_debut(new Integer(7));
+        LI.ajouter_debut(new Integer(5));
+        LI.ajouter_debut(new Integer(3));
+        for (int i = 0; i < LI.getTaille() - 1; ++i) {
+            System.out.println("item Li" + LI.getDebut());
         }
-//x==7.1,t==2;
     }
 
-    public static void affiche(Pile Mapile, String msg) {
+    public static void affiche(PileAr Mapile, String msg) {
         try {
             System.out.println(msg + "Sommet : " + Mapile.sommet());
 
