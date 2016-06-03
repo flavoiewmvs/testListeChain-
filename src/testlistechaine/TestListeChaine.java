@@ -38,10 +38,15 @@ public class TestListeChaine {
         LI.ajouter_debut(new Integer(7));
         LI.ajouter_debut(new Integer(5));
         LI.ajouter_debut(new Integer(3));
-        for (int i = 0; i < LI.getTaille() - 1; ++i) {
-            System.out.println("item Li" + LI.getDebut());
+        Iterator<Integer> IT = LI.iterator();
+
+        while (IT.hasNext()) {
+            Integer x = IT.next();
+            System.out.println(x);
+            }
         }
-    }
+
+    
 
     public static void affiche(PileAr Mapile, String msg) {
         try {
