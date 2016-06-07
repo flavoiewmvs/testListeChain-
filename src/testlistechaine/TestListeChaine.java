@@ -34,7 +34,7 @@ public class TestListeChaine {
         affiche(Mapile, "Apres depiller -> ");
         System.err.println("Taille :" + Mapile.size());
 
-        ListeDC<Integer> LI = new ListeDC<>();
+        ListeDC_FL<Integer> LI = new ListeDC_FL<>();
         LI.ajouter_debut(new Integer(7));
         LI.ajouter_debut(new Integer(5));
         LI.ajouter_debut(new Integer(3));
